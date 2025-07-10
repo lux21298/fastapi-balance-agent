@@ -4,6 +4,7 @@ from pydantic import BaseModel
 import secrets
 
 app = FastAPI()
+print("✅ ✅ main.py is running ✅ ✅") 
 security = HTTPBasic()
 
 # Tạm lưu user/pw trong dict memory
