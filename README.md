@@ -18,8 +18,8 @@ Start Command: uvicorn main:app --host 0.0.0.0 --port 10000
 
 Download: https://www.postman.com/ 
 
-- **Post**: https://fastapi-balance-agent1.onrender.com/register
-- 
+**Post**: https://fastapi-balance-agent1.onrender.com/register
+  
 In Body, choose "raw". In content:
 
 {
