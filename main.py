@@ -7,10 +7,8 @@ app = FastAPI()
 print("✅ ✅ main.py is running ✅ ✅") 
 security = HTTPBasic()
 
-# Tạm lưu user/pw trong dict memory
 users_db = {}
 
-# Model cho đăng ký user
 class UserRegister(BaseModel):
     username: str
     password: str
@@ -36,3 +34,6 @@ def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
 def read_root():
     return {"message": "Welcome to the FastAPI Balance Agent!"}
 
+@app.get("/balance")
+def get_balance(username: str = Depends(get_current_username)):
+    return {"username": username, "balance": 100}
