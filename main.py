@@ -31,7 +31,7 @@ def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
         )
     return credentials.username
 
-@app.get("/balance")
-def get_balance(username: str = Depends(get_current_username)):
-    # Luôn trả về 100 đô
-    return {"username": username, "balance": 100}
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the FastAPI Balance Agent!"}
+
